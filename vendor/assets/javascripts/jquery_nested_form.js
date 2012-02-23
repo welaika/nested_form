@@ -8,8 +8,8 @@ jQuery(function($) {
     addFields: function(e) {
       // Setup
       var link    = e.currentTarget;
-      var assoc   = $(link).attr('data-association');            // Name of child
-      var content = $('#' + assoc + '_fields_blueprint').html(); // Fields template
+      var assoc   = $(link).data('association');            // Name of child
+      var content = $(link).data('fields-blueprint'); // Fields template
 
       // Make the context correct by replacing new_<parents> with the generated ID
       // of each of the parent objects
